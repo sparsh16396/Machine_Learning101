@@ -1,0 +1,11 @@
+from PIL import Image
+import matplotlib.pyplot as plt
+img= Image.open("/home/abes/Desktop/a.jpeg")
+img.show()
+hist=img.histogram()
+print(hist)
+plt.figure(0)
+plt.xlabel('histo')
+for i in range(0, 256):
+    plt.bar(i, hist[i])
+plt.show()
